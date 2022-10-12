@@ -116,7 +116,8 @@ element1.save({
 
     id: 1, 
     product: "Auto", 
-    price: 10000
+    price: 10000,
+    thumbnail: "https://wpdirecto.com/wp-content/uploads/2017/08/alt-de-una-imagen.png"
 
 });
 
@@ -124,7 +125,8 @@ element1.save({
 
     id: 2, 
     product: "Celular", 
-    price: 1000
+    price: 1000,
+    thumbnail: "https://wpdirecto.com/wp-content/uploads/2017/08/alt-de-una-imagen.png"
 
 });
 
@@ -132,7 +134,8 @@ element1.save({
     
     id: 3, 
     product: "PC", 
-    price: 5000
+    price: 5000,
+    thumbnail: "https://wpdirecto.com/wp-content/uploads/2017/08/alt-de-una-imagen.png"
 
 });
 
