@@ -4,8 +4,21 @@ const sumar15 = sumar(15);
 const resultado = sumar15(25);
 console.log(resultado); */
 
-const fs = require("fs");
+const { conect } = require("./server.js");
 
-const promise = fs.promises.readFile("./main.js", "utf-8");
+const inicializate = async () => {
 
-promise.then(res => console.log(res)).catch(err => console.log(err));
+    try {
+
+        const newServer = await conect(8080);
+        console.log("¡¡Conectado a el puerto : " + newServer.address().port + " !!");
+
+    } catch (err) {
+
+        console.log("Error :" + err);
+
+    }
+
+};
+
+inicializate();

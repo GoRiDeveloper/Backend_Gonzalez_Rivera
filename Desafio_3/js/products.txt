@@ -1,0 +1,28 @@
+[
+
+    {
+
+        "id": 1,
+        "product": "Auto",
+        "price": 10000,
+        "thumbnail": "httpswpdirecto.com/wp-content/uploads/2017/08/alt-de-una-imagen.png"
+
+    },
+    {
+
+        "id": 2,
+        "product": "Celular",
+        "price": 700,
+        "thumbnail": "htt/wpdirecto.com/wp-content/uploads/2017/08/alt-de-una-imagen.png"
+
+    },
+    {
+
+        "id": 3,
+        "product": "Laptop",
+        "price": 1250,
+        "thumbnail": "http/wpdirecto.com/wp-content/uploads/2017/08/alt-de-una-imagen.png"
+
+    }
+
+]
