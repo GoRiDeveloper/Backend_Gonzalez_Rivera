@@ -1,0 +1,41 @@
+<h2 class="title-list"> Lista de Productos : </h2>
+{{#if boolean}}
+
+<table class="table">
+
+    <thead>
+
+        <tr>
+
+            <th> Nombre </th>
+            <th> Precio </th>
+            <th> Imagen </th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+    {{#each products}}
+        <tr>
+
+            <td>
+                <h4>{{this.product}}</h4>
+            </td>
+            <td>
+                <h4> $ {{this.price}}</h4>
+            </td>
+            <td>
+                <img class="img-table" src="{{this.thumbnail}}"/>
+            </td>
+
+        </tr>
+    {{/each}}
+    </tbody>
+
+</table>
+
+{{else}}
+<p class="p-prods"> No hay Productos para mostrar... </p>
+{{/if}}
+<a class="add-button" href="/"> Agregar Producto </a>

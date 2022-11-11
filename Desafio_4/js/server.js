@@ -25,8 +25,4 @@ const serverConect = (port = 0) => {
 
 };
 
-module.exports = {
-
-    serverConect
-
-};
+module.exports = { serverConect };

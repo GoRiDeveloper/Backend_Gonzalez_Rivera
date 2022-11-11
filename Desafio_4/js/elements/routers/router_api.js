@@ -17,8 +17,4 @@ routerApi.post("/", controllerPostProduct);
 routerApi.put("/:id", controllerPutProduct);
 routerApi.delete("/:id", controllerDeleteProduct);
 
-module.exports = {
-
-    routerApi
-
-};
+module.exports = { routerApi };

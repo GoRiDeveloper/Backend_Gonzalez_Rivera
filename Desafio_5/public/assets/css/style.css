@@ -1,0 +1,199 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(180, 180, 180);
+    letter-spacing: 2px;
+
+}
+
+body {
+
+    background-color: #1A4A5A;
+
+}
+
+section {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+h4 {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.title-form {
+
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 1rem;
+
+}
+
+.div-principal {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 10px;
+    width: 80%;
+    height: 450px;
+    padding: 20px;
+
+}
+
+.form-input {
+
+    display: flex;
+    flex-direction: column;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
+
+}
+
+.form-input label {
+
+    padding-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #000;
+
+}
+
+.form-input input {
+
+    width: 100%;
+    height: 20px;
+    margin-bottom: 1rem;
+    padding: 10px;
+    color: #000;
+
+}
+
+.form-input button {
+
+    background-color: rgb(68, 113, 143);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+.form-input button:hover,
+.page-button:hover,
+.add-button:hover {
+
+    background-color: #fff;
+    color: #000;
+
+}
+
+.div-button {
+
+    margin: 1rem;
+
+}
+
+.page-button {
+
+    margin: 1rem;
+    padding: 10px 30px;
+    background-color: rgb(68, 113, 143);
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all .5s;
+    cursor: pointer;
+
+}
+
+.section__prods {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title-list {
+
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 1rem;
+
+}
+
+.table {
+
+    margin: 1rem 0;
+    box-shadow: 0 0 20px rgb(0 0 0 / 15%);
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+
+}
+
+.table thead tr {
+
+    background-color: #1e3852;
+    text-align: left;
+
+}
+
+.table thead tr th {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 12px 15px;
+
+}
+
+.table tbody tr {
+
+    border-bottom: 1px solid #fff;
+
+}
+
+.img-table {
+
+    max-width: 150px;
+
+}
+
+.p-prods {
+
+    margin: 1rem 1rem 2rem;
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.add-button {
+
+    margin: 1rem;
+    padding: 10px 30px;
+    background-color: rgb(68, 113, 143);
+    border: 2px solid #000;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all .5s;
+    cursor: pointer;
+
+}
