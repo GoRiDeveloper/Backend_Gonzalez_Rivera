@@ -1,0 +1,249 @@
+DESAFÍO 9 : MONGODB.
+
+- Servidor :
+
+// Inicia el Servidor MongoDB.
+
+    * mongod --dbpath "Dirección a la carpeta de la base de datos" 
+
+- Cliente :
+
+// Inicia el Cliente.
+
+    * mongosh
+
+// Utiliza la Base de Datos y si no existe, la crea al crear una collección.
+
+    * use E-Commerce
+
+// Crea la colección en la Base de Datos que se esta utilizando. (en este caso, crea 2 colecciones)
+
+    * db.createCollection("Products")
+    * db.createCollection("Messages")
+
+/* Agrega 10 documentos con valores distintos a las colecciones creadas. */
+
+// Agrega varios elementos distintos a la colección.
+
+    * db.Products.insertMany([
+
+    {
+
+        name: 'Televisión', 
+        description: 'Television HD con Smart T.V.', 
+        price: 4590, 
+        img: 'https://www.donbalon.com/images/venue_default.png'
+
+    },
+    {
+
+        name: 'Celular', 
+        description: 'Celular de Alta Gama con resistencia al agua.', 
+        price: 3100, 
+        img: 'https://www.donbalon.com/images/venue_default.png'
+
+    },
+    {
+
+        name: 'Computadora', 
+        description: 'Computadora de Escritorio de alto rendimiento.', 
+        price: 4999, 
+        img: 'https://www.donbalon.com/images/venue_default.png' 
+
+    },
+    {
+
+        name: 'Laptop', 
+        description: 'Laptop de alto rendimiento.', 
+        price: 4899, 
+        img: 'https://www.donbalon.com/images/venue_default.png'
+
+    },
+    {
+
+        name: 'Cargador de P.C.', 
+        description: 'Cargador de alto voltaje para P.C.', 
+        price: 788, 
+        img: 'https://www.donbalon.com/images/venue_default.png' 
+
+    },
+    {
+
+        name: 'Cable HDMI', 
+        description: 'Cable HDMI de fibra óptica.', 
+        price: 1499, 
+        img: 'https://www.donbalon.com/images/venue_default.png'
+
+    },
+    {
+
+        name: 'Disco Duro', 
+        description: 'Disco Duro de estado solido.', 
+        price: 2000, 
+        img: 'https://www.donbalon.com/images/venue_default.png'
+
+    },
+    {
+
+        name: 'Monitor', 
+        description: 'Monitor Full HD Curvo.', 
+        price: 3879, 
+        img: 'https://www.donbalon.com/images/venue_default.png' 
+
+    },
+    {
+
+        name: 'Teclado', 
+        description: 'Teclado de alto rendimiento.', 
+        price: 900, 
+        img: 'https://www.donbalon.com/images/venue_default.png'
+
+    },
+    {
+
+        name: 'Memoria USB', 
+        description: 'Memoria de 64GB de alto rendimiento.', 
+        price: 500, 
+        img: 'https://www.donbalon.com/images/venue_default.png' 
+
+    }
+
+    ])
+
+    * db.Messages.insertMany([
+
+        {
+
+            author: "Usuario_1",
+            message: "Mensaje_1"
+
+        },
+        {
+
+            author: "Usuario_2",
+            message: "Mensaje_2"
+
+        },
+        {
+
+            author: "Usuario_3",
+            message: "Mensaje_3"
+
+        },
+        {
+
+            author: "Usuario_4",
+            message: "Mensaje_4"
+
+        },
+        {
+
+            author: "Usuario_5",
+            message: "Mensaje_5"
+
+        },
+        {
+
+            author: "Usuario_6",
+            message: "Mensaje_6"
+
+        },
+        {
+
+            author: "Usuario_7",
+            message: "Mensaje_7"
+
+        },
+        {
+
+            author: "Usuario_8",
+            message: "Mensaje_8"
+
+        },
+        {
+
+            author: "Usuario_9",
+            message: "Mensaje_9"
+
+        },
+        {
+
+            author: "Usuario_10",
+            message: "Mensaje_10"
+
+        }
+
+    ])
+
+// Listar todos los elementos de una collección.
+
+    * db.Products.find()
+
+    * db.Messages.find()
+
+// Muestra la cantidad de documentos almacenados dentro de una colección.
+
+    * db.Products.estimatedDocumentCount()
+
+    * db.Messages.estimatedDocumentCount()
+
+/* C.R.U.D. a alguna colección. */
+
+// Agregar un nuevo documento.
+
+    * db.Products.insertOne({
+
+        name: "Tarjeta Gráfica",
+        description: "Tarjeta Gráfica de alto rendimiento.",
+        price: 3999,
+        img: "https://www.donbalon.com/images/venue_default.png"
+
+    })
+
+// Realizar consultas por Nombre específico.
+
+/// Elementos con precio menor a 1000 $.
+
+    * db.Products.find({ price: {$lt: 1000} })
+
+/// Elementos con precio entre 1000 $ y 3000 $.
+
+    * db.Products.find({ $and: [ { price: {$gt: 1000} }, { price: {$lt: 3000} } ] })
+
+/// Elementos con precio mayor a 3000 $.
+
+    * db.Products.find({ price: {$gt: 3000} })
+
+/// Tercer elemento con el precio más bajo.
+
+    * db.Products.find({}, { _id: 0, name: 1 }).sort({price: 1}).skip(2).limit(1)
+
+// Agregar un stock de 100 a todos los elementos de una colección.
+
+    * db.Products.updateMany({}, { $set: { stock: 100 } })
+
+// Actualizar el stock a 0 a elementos con precio mayor a 4000 $.
+
+    * db.Products.updateMany({ price: {$gt: 4000} }, { $set: { stock: 0 } })
+
+// Borrar los elementos con precio menor a 1000 $.
+
+    * db.Products.deleteMany({ price: {$lt: 1000} })
+
+/* Crear un Usuario de solo lectura para la Base de Datos E-Commerce */
+
+    * use admin
+
+    * db.createUser({ user: pepe, pwd: asd456, roles: [{ role: "read", db: "E-Commerce" }] })
+
+- Servidor :
+
+// Inicia el servidor con el control de acceso habilitado.
+
+    * mongod --auth --dbpath "Dirección a la carpeta de la base de datos" 
+
+- Cliente :
+
+// Inicia Sesión con el usuario creado.
+
+    * mongosh -u pepe -p asd456
