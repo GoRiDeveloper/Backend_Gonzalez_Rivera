@@ -1,4 +1,4 @@
-import { SERVER_CONECT } from "./server.js"
+import SERVER_CONECT from "./server.js"
 
 const PORT = 8080 /*?? process.env.PORT*/;
 
