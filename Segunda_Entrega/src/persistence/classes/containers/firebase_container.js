@@ -19,6 +19,8 @@ export class FirebaseContainer {
 
         const SAVE = await this.#collection.doc(ID).set(obj);
 
+        if (!SAVE) return SAVE;
+
         return obj;
 
     };
@@ -57,6 +59,8 @@ export class FirebaseContainer {
                 ITEM = await this.#collection.doc(obj.id).get(),
                 PROD = asObj(ITEM);
 
+        if (Object.keys(PROD).length < 1) return null;
+
         return PROD;
 
     };
@@ -66,6 +70,8 @@ export class FirebaseContainer {
         const ITEM = await this.#collection.doc(criterion).get(),
          TO_ERASED = asObj(ITEM),
             DELETE = await this.#collection.doc(criterion).delete();
+
+        if (!DELETE) return null;
         
         return TO_ERASED;
 

@@ -1,22 +1,30 @@
-import PRODUCTS_ROUTER from "./routers/router_products.js";
-import CARTS_ROUTER from "./routers/router_carts.js";
-import { controllerAllPath } from "./controllers/controllers_products.js"
-import express, {json, urlencoded} from "express";
+import { PRODUCTS_ROUTER } from "./routers/router_products.js";
+import { handleSocket } from "./functions/functions.js";
+import { Server as HttpServer } from "http";
+import { Server as IOServer } from "socket.io"
+import express, { json, urlencoded } from "express";
 
 const APP = express();
+const HTTP_SERVER = new HttpServer(APP),
+               IO = new IOServer(HTTP_SERVER);
 
 APP.use(json());
 APP.use(urlencoded({ extended: true }));
+APP.use(express.static("public"));
 
-APP.use("/api/products", PRODUCTS_ROUTER);
-APP.use("/api/carts", CARTS_ROUTER);
-APP.use("*", controllerAllPath);
+APP.use("/api/products-test", PRODUCTS_ROUTER);
 
-export default (port = 0) => {
+IO.on("connection", (socket) => {
 
-    return new Promise((res, rej) => {
+    handleSocket(socket, IO.sockets);
 
-        const SERVER_CONECTED = APP.listen(port, () => {
+});
+
+export const SERVER_CONECT = (port = 0) => {
+
+    return new Promise ((res, rej) => {
+
+        const SERVER_CONECTED = HTTP_SERVER.listen(port, () => {
 
             res(SERVER_CONECTED);
 

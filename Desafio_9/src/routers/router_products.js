@@ -1,20 +1,8 @@
-import {
-
-    controllerGetProducts,
-    controllerGetProduct,
-    controllerPostProduct,
-    controllerPutProduct,
-    controllerDeleteProduct
-
-} from "../controllers/controllers_products.js"
 import { Router } from "express";
+import { controllerGetProducts } from "../controllers/products_controllers.js";
 
-const PRODS_ROUTER = Router();
+const PRODUCTS_ROUTER = Router();
 
-PRODS_ROUTER.get("/", controllerGetProducts);
-PRODS_ROUTER.get("/:id", controllerGetProduct);
-PRODS_ROUTER.post("/", controllerPostProduct);
-PRODS_ROUTER.put("/:id", controllerPutProduct);
-PRODS_ROUTER.delete("/:id", controllerDeleteProduct);
+PRODUCTS_ROUTER.get("/", controllerGetProducts);
 
-export default PRODS_ROUTER;
+export { PRODUCTS_ROUTER };

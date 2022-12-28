@@ -1,9 +1,9 @@
-import { MDB } from "../../config/clients/mongodb_client.js";
+import { MDB } from "../config/clients/mongodb_client.js";
 
 export class MongoDBContainer {
 
     #collection
-       
+
     constructor (nameCollection) {
 
         this.#collection = MDB.collection(nameCollection);
@@ -52,6 +52,8 @@ export class MongoDBContainer {
              UPDATE = await this.#collection.updateOne(QUERY, { $set: obj }),
                ITEM = await this.#collection.findOne(QUERY);
 
+        if (!UPDATE) return null;
+
         return ITEM;
 
     };
@@ -67,12 +69,6 @@ export class MongoDBContainer {
         if (!ERASED) return null;
 
         return TO_ERASED;
-
-    };
-
-    async specificUpdate () {
-
-
 
     };
 

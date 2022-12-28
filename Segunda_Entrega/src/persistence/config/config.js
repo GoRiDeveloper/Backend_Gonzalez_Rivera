@@ -6,10 +6,4 @@ const DB_NAME = "Shop_GGR";
 
 const PERSISTENCE = "default";
 
-export { 
-
-    CNX_STR, 
-    DB_NAME, 
-    PERSISTENCE
-
-};
+export { CNX_STR, DB_NAME, PERSISTENCE };

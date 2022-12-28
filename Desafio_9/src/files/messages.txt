@@ -1,0 +1,25 @@
+[
+	{
+		"entities": {
+			"author": {
+				"riveragovanni305@gmail.com": {
+					"email": "riveragovanni305@gmail.com",
+					"name": "Govanni",
+					"lastname": "González",
+					"age": 18,
+					"alias": "GoRi23",
+					"avatar": "https://grupoptm.com/wp-content/plugins/accelerated-mobile-pages/images/SD-default-image.png"
+				}
+			},
+			"messages": {
+				"905aec79-c66f-4369-9e30-d2d408555f1b": {
+					"id": "905aec79-c66f-4369-9e30-d2d408555f1b",
+					"author": "riveragovanni305@gmail.com",
+					"message": "Holala aaaa putooos",
+					"date": "28/12/2022 00:15:12"
+				}
+			}
+		},
+		"result": "905aec79-c66f-4369-9e30-d2d408555f1b"
+	}
+]

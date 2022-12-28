@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./assets/css/style.css">
+
+        <script defer src="./assets/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+
+        <title> Tienda - GR </title>
+
+    </head>
+
+    <body>
+
+        <h1 class="title"> Tienda GR </h1>
+
+        <input class="button-chat show-prods" type="submit" value="Ver Productos" />
+
+        <section class="table-container">
+
+            <table class="table">
+
+
+
+            </table>
+
+        </section>
+
+        <section>
+
+            <div class="div-principal">
+
+                <form class="form-input">
+
+                    <h2 class="title-form"> Centro de Mensajes </h2>
+
+                    <label for="email"> E-Mail : </label>
+                    <input id="email" type="email" placeholder="E-Mail :" />
+
+                    <label for="name"> Nombre : </label>
+                    <input id="name" type="text" placeholder="Nombre :" />
+
+                    <label for="lastname"> Apellido : </label>
+                    <input id="lastname" type="text" placeholder="Apellido :" />
+
+                    <label for="age"> Edad : </label>
+                    <input id="age" type="number" placeholder="Edad :" />
+
+                    <label for="alias"> Alias : </label>
+                    <input id="alias" type="text" placeholder="Alias :" />
+
+                    <label for="avatar"> Avatar : </label>
+                    <input id="avatar" type="text" placeholder="Avatar :" />
+
+                    <label for="message"> Mensaje : </label>
+                    <textarea id="message" cols="30" rows="10" maxlength="120" placeholder="Mensaje :"></textarea>
+
+                    <button class="send-message" type="submit"> Enviar Mensaje </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <section class="messages-chat">
+
+
+
+        </section>
+        
+    </body>
+    
+</html>
