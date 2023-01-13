@@ -1,0 +1,85 @@
+{{#if logged}}
+
+<nav class="nav">
+
+    <h1 class="nav-title"> ¡Bienvenido : "{{name}}"! </h1>
+
+    <button class="nav-button"> Cerrar Sesión </button>
+
+</nav>
+
+<h2 class="title"> Tienda GR </h2>
+
+<input class="button-chat show-prods" type="submit" value="Ver Productos" />
+
+<section class="table-container">
+
+    <table class="table">
+
+
+
+    </table>
+
+</section>
+
+<section>
+
+    <div class="div-principal">
+
+        <form class="form-input">
+
+            <h2 class="title-form"> Centro de Mensajes </h2>
+
+            <label for="email"> E-Mail : </label>
+            <input id="email" type="email" placeholder="E-Mail :" />
+
+            <label for="name"> Nombre : </label>
+            <input id="name" type="text" placeholder="Nombre :" />
+
+            <label for="lastname"> Apellido : </label>
+            <input id="lastname" type="text" placeholder="Apellido :" />
+
+            <label for="age"> Edad : </label>
+            <input id="age" type="number" placeholder="Edad :" />
+
+            <label for="alias"> Alias : </label>
+            <input id="alias" type="text" placeholder="Alias :" />
+
+            <label for="avatar"> Avatar : </label>
+            <input id="avatar" type="text" placeholder="Avatar :" />
+
+            <label for="message"> Mensaje : </label>
+            <textarea id="message" cols="30" rows="10" maxlength="120" placeholder="Mensaje :"></textarea>
+
+            <button class="send-message" type="submit"> Enviar Mensaje </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<section class="messages-chat">
+
+
+
+</section>
+
+{{else}}
+
+<section class="section-login">
+
+    <h1 class="title-login"> Iniciar Sesión </h1>
+            
+    <form class="form-login" action="/sessions/registered" method="post" enctype="application/x-www-form-urlencoded">
+
+        <label for="name-login"> Ingresa tu Nombre : </label>
+        <input id="name-login" name="name" type="text" />
+
+        <input class="button-login" type="submit" value="Enviar" />
+
+    </form>
+
+</section>
+
+{{/if}}

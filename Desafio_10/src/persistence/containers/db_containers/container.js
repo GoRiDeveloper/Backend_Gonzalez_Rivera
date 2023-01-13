@@ -17,18 +17,25 @@ export class Container {
     async save (obj) {
 
         this.#container = [];
+
+        const DATA = await this.getAll();
+
+        if (DATA) this.#container.push(...DATA);
+
         this.#container.push(obj);
 
         await FS.writeFile(
-            
-            this.#file, 
+
+            this.#file,
             JSON.stringify(
-                
-                this.#container, 
-                null, 
+
+                this.#container,
+                null,
                 "\t"
 
-            ));
+            )
+            
+        );
 
         return obj;
 
@@ -45,15 +52,15 @@ export class Container {
 
     };
 
-    async getOne (criterion) {
+    async getOne (id) {
 
         const DATA = await this.getAll();
 
-        if (!DATA) return DATA;
+        if (!DATA) return null;
 
-        const ITEM = DATA.find(item => item.id === criterion);
+        const ITEM = DATA.find(item => item.id === id);
 
-        if (!ITEM) return ITEM;
+        if (!ITEM) return null;
 
         return ITEM;
 
@@ -63,11 +70,11 @@ export class Container {
 
         const DATA = await this.getAll();
 
-        if (!DATA) return DATA;
+        if (!DATA) return null;
 
-        const INDEX = DATA.findIndex(item => item.id === obj.id);
+        const INDEX = DATA.findIndex(item => item.id === id);
 
-        if (!INDEX) return INDEX;
+        if (INDEX === -1) return null;
 
         this.#container = [];
         this.#container.push(DATA);
@@ -75,28 +82,30 @@ export class Container {
 
         await FS.writeFile(
 
-            this.#file, 
+            this.#file,
             JSON.stringify(
 
-                this.#container, 
-                null, 
+                this.#container,
+                null,
                 "\t"
-                
-            ));
+
+            )
+
+        );
 
         return this.#container[INDEX];
 
     };
 
-    async deleteOne (criterion) {
+    async deleteOne (id) {
 
         const DATA = await this.getAll();
 
-        if (!DATA) return DATA;
+        if (!DATA) return null;
 
-        const INDEX = DATA.findIndex(item => item.id === criterion);
+        const INDEX = DATA.findIndex(item => item.id === id);
 
-        if (!INDEX) return INDEX;
+        if (INDEX === -1) return null;
 
         this.#container = [];
         this.#container.push(DATA);
@@ -105,14 +114,16 @@ export class Container {
 
         await FS.writeFile(
 
-            this.#file, 
+            this.#file,
             JSON.stringify(
-                
-                this.#container, 
-                null, 
+
+                this.#container,
+                null,
                 "\t"
 
-            ));
+            )
+
+        );
 
         return ERASED;
 
