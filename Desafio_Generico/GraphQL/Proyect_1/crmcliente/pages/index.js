@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout.js";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useQuery, gql } from "@apollo/client";
 
@@ -23,15 +24,23 @@ const OBTENER_CLIENTES_USUARIO = gql`
 
 export default function Index() {
 
-  const ROUTER = useRouter();
-  const { data, loading, error } = useQuery(OBTENER_CLIENTES_USUARIO);                          
+  const 
+  
+  ROUTER = useRouter(),
+  {
+
+    data, 
+    loading, 
+    error 
+    
+  } = useQuery(OBTENER_CLIENTES_USUARIO);                          
 
   if (loading) return null;
-  debugger
 
-  if (!data.obtenerClientesVendedor) {
+  if (typeof window !== "undefined") {
 
-    return ROUTER.push("/login");
+    if (!data.obtenerClientesVendedor && !localStorage.getItem("token")) ROUTER.push("/login");
+    if (!data.obtenerClientesVendedor && localStorage.getItem("token")) ROUTER.reload();
 
   };
 
@@ -42,6 +51,10 @@ export default function Index() {
       <Layout>
 
         <h1 className="text-2xl text-gray-800 font-light"> Clientes </h1>
+
+        <Link href="/nuevocliente" className="bg-blue-800 py-2 px-5 mt-3 inline-block text-white rounded text-sm hover:bg-gray-800 mb-3 uppercase font-bold"> 
+          Nuevo Cliente 
+        </Link>
 
         <table className="table-auto shadow-md mt-10 w-full w-lg">
 
@@ -61,17 +74,20 @@ export default function Index() {
 
             { 
 
-              data.obtenerClientesVendedor.map(cliente => (
+              data.obtenerClientesVendedor
 
-                <tr key={cliente.id}>
+                ? data.obtenerClientesVendedor.map(cliente => (
 
-                  <td className="text-black text-center border px-4 py-2"> {cliente.nombre} {cliente.apellido} </td>
-                  <td className="text-black text-center border px-4 py-2"> {cliente.empresa} </td>
-                  <td className="text-black text-center border px-4 py-2"> {cliente.email} </td>
+                  <tr key={cliente.id}>
 
-                </tr>
+                    <td className="text-black text-center border px-4 py-2"> {cliente.nombre} {cliente.apellido} </td>
+                    <td className="text-black text-center border px-4 py-2"> {cliente.empresa} </td>
+                    <td className="text-black text-center border px-4 py-2"> {cliente.email} </td>
 
-              ))
+                  </tr>
+
+                ))
+                : <h1 className="text-black"> Cargando... </h1>
               
             }
 

@@ -24,10 +24,12 @@ const NUEVA_CUENTA = gql`
 
 export default function NuevaCuenta () {
 
-    const [mensaje, guardarMensaje] = useState(null),
-                   [ nuevoUsuario ] = useMutation(NUEVA_CUENTA),
-                             ROUTER = useRouter();
-
+    const 
+    
+    ROUTER                    = useRouter(),
+    [mensaje, guardarMensaje] = useState(null),
+    [ nuevoUsuario ]          = useMutation(NUEVA_CUENTA);
+                        
     const FORMIK = useFormik({
 
         initialValues: {

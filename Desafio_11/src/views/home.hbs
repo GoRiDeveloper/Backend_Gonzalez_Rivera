@@ -1,0 +1,25 @@
+{{#if loggued}}
+
+<nav class="nav">
+
+    <h1 class="nav-title"> ¡Bienvenido : "{{name}}"! </h1>
+
+    <button class="nav-button"> Cerrar Sesión </button>
+
+</nav>
+
+<h2 class="title"> Tienda GR </h2>
+
+{{>products}}
+
+{{>chat}}
+
+{{else}}
+
+<section class="section-welcome">
+
+    <h1 class="welcome"> ¡BIENVENID@! </h1>
+    
+</section>
+
+{{/if}}

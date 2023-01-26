@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Layout from "../components/Layout.js";
 import { useRouter } from "next/router";
 import { useFormik } from "formik";
 import { object, string } from "yup";
 import { useMutation, gql } from "@apollo/client";
+import Layout from "../components/Layout.js";
 
 const AUTENTICAR_USUARIO = gql`
 
@@ -20,12 +20,13 @@ const AUTENTICAR_USUARIO = gql`
 `;
 
 export default function Login () {
-
-    const [mensaje, guardarMensaje] = useState(null),
-                [autenticarUsuario] = useMutation(AUTENTICAR_USUARIO),
-                             ROUETR = useRouter();
-
-    const FORMIK = useFormik({
+    
+    const 
+    
+    ROUTER                    = useRouter(),  
+    [mensaje, guardarMensaje] = useState(null),
+    [autenticarUsuario]       = useMutation(AUTENTICAR_USUARIO),
+    FORMIK                    = useFormik({
 
         initialValues: {
 
@@ -72,19 +73,15 @@ export default function Login () {
                 setTimeout(() => {
 
                     guardarMensaje(null);
-                    ROUETR.push("/");
+                    ROUTER.push("/");
 
-                }, 2000);
+                }, 2500);
 
             } catch (err) {
 
                 guardarMensaje(err.message);
 
-                setTimeout(() => {
-                    
-                    guardarMensaje(null);
-
-                }, 3500);
+                setTimeout(() => guardarMensaje(null) , 3500);
 
             };
 
@@ -92,7 +89,17 @@ export default function Login () {
 
     });
 
-    const mostrarMensaje = () => {
+    if (typeof window !== "undefined") {
+
+        if (localStorage.getItem("token")) {
+    
+            ROUTER.push("/");
+        
+        };
+
+    };
+
+    function mostrarMensaje () {
 
         return (
 

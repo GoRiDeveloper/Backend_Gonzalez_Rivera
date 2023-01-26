@@ -1,0 +1,33 @@
+{{#if username}}
+
+<p class="has-registered"> Haz sido registrado: "{{username}}", ingresa a tu cuenta. </p>
+
+{{/if}}
+
+<main class="main-login">
+
+    <div class="div-register">
+
+        <a class="register-button" href="/register"> Registrarse </a>
+
+    </div>
+
+    <section class="section-login">
+
+        <h1 class="title-login"> Iniciar Sesión </h1>
+                
+        <form class="form-login" action="/login" method="post">
+
+            <label for="user-login"> Ingresa tu Nombre de Usuario : </label>
+            <input id="user-login" name="username" type="text" />
+
+            <label for="pass-login"> Ingresa tu Contraseña : </label>
+            <input id="pass-login" name="password" type="password" />
+
+            <input class="button-login" type="submit" value="Enviar" />
+
+        </form>
+
+    </section>
+
+</main>
