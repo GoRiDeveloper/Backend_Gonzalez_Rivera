@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 import { useFormik } from "formik";
 import { object, string } from "yup";
 import { useMutation, gql } from "@apollo/client";
@@ -20,12 +20,13 @@ const AUTENTICAR_USUARIO = gql`
 `;
 
 export default function Login () {
-    
+
     const 
     
     ROUTER                    = useRouter(),  
     [mensaje, guardarMensaje] = useState(null),
     [autenticarUsuario]       = useMutation(AUTENTICAR_USUARIO),
+    
     FORMIK                    = useFormik({
 
         initialValues: {

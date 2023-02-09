@@ -1,0 +1,23 @@
+{{#if args}}
+
+<div class="info-box">
+
+    <div class="box">
+
+        <p> Argumentos de Entrada : {{args}} </p>
+        <p> Sistema Operativo : {{os}} </p>
+        <p> Versión de Node JS : {{nodeVersion}} </p>
+        <p> Memoria total reservada : {{rss}} </p>
+        <p> Path de Ejecución : {{execPath}} </p>
+        <p> ID del Proceso : {{pid}} </p>
+        <p> Carpeta del Proyecto : {{path}} </p>
+
+    </div>
+
+</div>
+
+{{else}}
+
+<h1> No se encontró información. </h1>
+
+{{/if}}

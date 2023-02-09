@@ -58,6 +58,8 @@ const CONTROLLER_LOGIN = passport.authenticate(
 
 async function controllerSuccessLogin ({ session }, res) {
 
+    if (!session.passport) return res.redirect("/login/fail");
+
     if (session.passport.user) {
 
         if (!session.cookie.userId) {

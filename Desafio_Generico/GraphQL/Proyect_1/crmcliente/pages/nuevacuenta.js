@@ -94,11 +94,7 @@ export default function NuevaCuenta () {
 
                 guardarMensaje(err.message);
 
-                setTimeout(() => {
-
-                    guardarMensaje(null);
-
-                }, 3500);
+                setTimeout(() => guardarMensaje(null), 3500);
 
             };
 

@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import Script from "next/script";
 import Sidebar from "./Sidebar.js";
 import Header from "./Header.js";
 import { useRouter } from "next/router";

@@ -69,6 +69,9 @@ const resolvers = {
         },
         obtenerClientesVendedor: async (_, {}, ctx) => {
 
+            if (!ctx.USUARIO)
+                throw new Error("No se pudo Autenticar el Usuario.");
+
             try {
                 
                 const CLIENTES = await Cliente.find({ vendedor: ctx.USUARIO.id.toString() });
@@ -112,7 +115,9 @@ const resolvers = {
 
             try {
 
-                const PEDIDOS = await Pedido.find({ vendedor: ctx.USUARIO.id });
+                const PEDIDOS = await Pedido.find({ vendedor: ctx.USUARIO.id })
+                                                .populate("cliente");
+
                 return PEDIDOS;
                 
             } catch (err) {

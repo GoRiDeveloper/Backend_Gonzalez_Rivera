@@ -43,7 +43,7 @@ const typeDefs = `#graphql
         id: ID
         pedido: [PedidoGrupo]
         total: Float
-        cliente: ID
+        cliente: Cliente
         vendedor: ID
         fecha: String
         estado: EstadoPedido
@@ -53,7 +53,9 @@ const typeDefs = `#graphql
     type PedidoGrupo {
 
         id: ID
+        nombre: String
         cantidad: Int
+        precio: Float
 
     }
 
@@ -108,6 +110,8 @@ const typeDefs = `#graphql
     input PedidoProductoInput {
 
         id: ID
+        nombre: String
+        precio: Float
         cantidad: Int
 
     }

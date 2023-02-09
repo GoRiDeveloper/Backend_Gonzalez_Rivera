@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout.js";
+import Swal from "sweetalert2";
 import { useFormik } from "formik";
 import { object, string } from "yup";
 import { gql, useMutation } from "@apollo/client";
@@ -50,17 +51,19 @@ export default function NuevoCliente () {
     
     ROUTER                     = useRouter(),
     [ mensaje, guardarMensaje] = useState(null),
+
     [ nuevoCliente ]           = useMutation(NUEVO_CLIENTE, {
 
         async update(cache, { data: { nuevoCliente } }) {
 
-            const QUERY = cache.readQuery(
+            const 
+            
+            QUERY                       = cache.readQuery(
 
                 { query: OBTENER_CLIENTES_USUARIO }
 
-            );
-
-            const { obtenerClientesVendedor } = QUERY;
+            ),
+            { obtenerClientesVendedor } = QUERY;
 
             cache.writeQuery({
 
@@ -81,7 +84,8 @@ export default function NuevoCliente () {
         }
 
     }),
-    FORMIK = useFormik({
+    
+    FORMIK                     = useFormik({
 
         initialValues: {
 
@@ -131,6 +135,14 @@ export default function NuevoCliente () {
                     }
 
                 });
+
+                Swal.fire(
+
+                    "Cliente Creado Correctamente", 
+                    "Se creo un nuevo cliente", 
+                    "success"
+
+                );
 
                 ROUTER.push("/");
                 

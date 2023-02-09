@@ -128,6 +128,8 @@ LOGOUT_BUTTON && LOGOUT_BUTTON.addEventListener("click", async e => {
         }
 
     })
+    .then(res => res.json())
+    .catch(err => console.log(err));
 
 });
 

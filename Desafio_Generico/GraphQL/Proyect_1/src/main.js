@@ -40,7 +40,7 @@ const { url } = await startStandaloneServer(SERVER, {
                 
             } catch (err) {
 
-                console.log(err);
+                console.log(`El Token ha expirado : + ${err}`);
 
             };
 
