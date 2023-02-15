@@ -1,0 +1,646 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(180, 180, 180);
+    letter-spacing: 2px;
+
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    background-color: #1A4A5A;
+
+}
+
+section {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+h4 {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.title {
+
+    padding: 1rem;
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+
+}
+
+.title-form {
+
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 1rem;
+    color: #000;
+
+}
+
+.div-principal {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 10px;
+    width: 80%;
+    padding: 20px;
+
+}
+
+.form-input {
+
+    display: flex;
+    flex-direction: column;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 1rem;
+
+}
+
+.form-input label {
+
+    padding-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #000;
+
+}
+
+.form-input input {
+
+    width: 100%;
+    height: 20px;
+    margin-bottom: 1rem;
+    padding: 10px;
+    color: #000;
+
+}
+
+.form-input button {
+
+    background-color: rgb(68, 113, 143);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+#message {
+
+    resize: none;
+    margin-bottom: 10px;
+
+}
+
+.form-input button:hover,
+.page-button:hover,
+.add-button:hover,
+.button-chat:hover,
+.button-register:hover,
+.button-info:hover {
+
+    background-color: #fff;
+    color: #000;
+
+}
+
+.div-button {
+
+    margin: 1rem;
+
+}
+
+.page-button {
+
+    margin: 1rem;
+    padding: 10px 30px;
+    background-color: rgb(68, 113, 143);
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all .5s;
+    cursor: pointer;
+
+}
+
+.section__prods {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title-list {
+
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 1rem;
+
+}
+
+.table__container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+
+}
+
+.table {
+
+    max-width: 800px;
+    width: 100%;
+    margin: 1rem 0;
+    box-shadow: 0 0 20px rgb(0 0 0 / 15%);
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    border-collapse: collapse;
+
+}
+
+.table tbody tr {
+
+    border-bottom: 1px solid #fff;
+
+}
+
+.table tbody tr th {
+
+    padding: 10px;
+    background-color: #1e3852;
+    border-width: 0;
+    font-size: 1.1rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+.table tbody tr td {
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+
+}
+
+.td-img {
+
+    width: 35%;
+    max-width: 200px;
+
+}
+
+.img-table {
+
+    width: 100%;
+    max-height: 300px;
+
+};
+
+.p-prods {
+
+    margin: 1rem 1rem 2rem;
+    font-size: 1.7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+
+}
+
+.add-button {
+
+    margin: 1rem;
+    padding: 10px 30px;
+    background-color: rgb(68, 113, 143);
+    border: 2px solid #000;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all .5s;
+    cursor: pointer;
+
+}
+
+.title-chat {
+
+    padding: 1rem;
+    font-size: 2.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+
+}
+
+.inputs {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.input-autor {
+
+    padding: 10px;
+    width: 73%;
+    height: 20px;
+    color: #000;
+
+}
+
+.input-mensaje {
+
+    padding: 10px;
+    width: 73%;
+    color: #000;
+    resize: none;
+
+}
+
+.button-chat {
+
+    background-color: rgb(68, 113, 143);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+.messages-chat {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+
+}
+
+.main-login {
+
+    max-width: 100vw;
+    height: 100vh;
+
+}
+
+.section-login {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title-login {
+
+    font-size: 2.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    padding-bottom: 1.5rem;
+
+}
+
+.form-login {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.form-login input {
+
+    width: 100%;
+    height: 20px;
+    margin-bottom: 1rem;
+    padding: 10px;
+    color: #000;
+
+}
+
+.button-login {
+
+    height: 50px !important;
+    background-color: rgb(68, 113, 143);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+.button-login:hover {
+
+    background-color: #fff;
+    color: #000;
+
+}
+
+.form-login label {
+
+    color: #000;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+
+}
+
+.nav {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #fff;
+    color: #000;
+    padding: 20px 0;
+
+}
+
+.nav-title {
+
+    color: #000;
+    font-size: 1.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 8px 0 0 0;
+
+}
+
+.nav-button {
+
+    background-color: rgb(68, 113, 143);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+.nav-button:hover {
+
+    background-color: #fff;
+    color: #000;
+
+}
+
+.logout {
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    text-align: center;
+
+}
+
+.section-welcome {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.welcome {
+
+    font-size: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+
+}
+
+.div-register {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+
+}
+
+.register-button {
+
+    height: 45px !important;
+    background-color: rgb(68, 113, 143);
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+.register-button:hover {
+
+    background-color: #fff;
+    color: #000;
+
+}
+
+.div-login {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+
+}
+
+.login-button {
+
+    height: 45px !important;
+    background-color: rgb(68, 113, 143);
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+.login-button:hover {
+
+    background-color: #fff;
+    color: #000;
+
+}
+
+.main-register {
+
+    max-width: 100vw;
+    height: 100vh;
+
+}
+
+.section-register {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title-register {
+
+    font-size: 2.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    padding-bottom: 1.5rem;
+
+}
+
+.form-register {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: #fff;
+    border: 3px solid #000;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.form-register label {
+
+    color: #000;
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+
+}
+
+.form-register input {
+
+    width: 100%;
+    height: 20px;
+    margin-bottom: 1rem;
+    padding: 10px;
+    color: #000;
+
+}
+
+.button-register {
+
+    height: 50px !important;
+    background-color: rgb(68, 113, 143);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+.has-registered {
+
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    padding-top: 10px;
+
+}
+
+.error {
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+    text-align: center;
+
+}
+
+.button-info {
+
+    background-color: rgb(68, 113, 143);
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+.info-box {
+
+    display: flex;
+    justify-content: center;    
+
+}
+
+.box {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+
+}
+
+.box p {
+
+    text-align: center;
+
+}

@@ -1,0 +1,57 @@
+{{#if args}}
+
+<section class="table-container">
+
+    <table class="table">
+
+        <tr>
+            
+            <td> Argumentos de Entrada : {{args}} </td>
+            <td> Sistema Operativo : {{os}} </td>
+            <td> Versión de Node JS : {{nodeVersion}} </td>
+
+        </tr>
+
+    </table>
+
+</section>
+
+<section class="table-container">
+
+    <table class="table">
+
+        <tr>
+            
+            <td> Memoria total reservada : {{rss}} </td>
+            <td> Path de Ejecución : {{execPath}} </td>
+            <td> ID del Proceso : {{pid}} </td>
+
+        </tr>
+
+    </table>
+
+</section>
+
+<section class="table-container">
+
+    <table class="table">
+
+        <tr>
+            
+            <td style="display: flex; justify-content: center; align-items: center;"> 
+
+                <p style="text-align: center; width: 80%;"> Carpeta del Proyecto : {{path}} </p>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</section>
+
+{{else}}
+
+<h1> No se encontró información. </h1>
+
+{{/if}}
