@@ -43,14 +43,14 @@ export default function Header () {
 
     return (
 
-        <div className="flex justify-between mb-6">
+        <div className="sm:flex justify-between mb-6">
 
             {
 
                 data.obtenerUsuario
 
-                    ? (<p className="text-black mr-2"> Hola : {data.obtenerUsuario.nombre} {data.obtenerUsuario.apellido} </p>)
-                    : (<p className="text-black mr-2"> Cargando... </p>)
+                    ? (<p className="text-black mr-2 mb-5 lg:mb-0"> Hola : {data.obtenerUsuario.nombre} {data.obtenerUsuario.apellido} </p>)
+                    : (<p className="text-black mr-2 mb-5 lg:mb-0"> Cargando... </p>)
 
             }
 

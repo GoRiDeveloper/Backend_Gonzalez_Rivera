@@ -56,40 +56,44 @@ export default function Productos () {
                     Nuevo Producto
                 </Link>
 
-                <table className="table-auto shadow-md mt-10 w-full w-lg">
+                <div className="overflow-x-scroll">
 
-                    <thead className="bg-gray-800">
+                    <table className="table-auto shadow-md mt-10 w-full w-lg">
 
-                        <tr className="text-white">
+                        <thead className="bg-gray-800">
 
-                            <th className="w-1/5 py-2"> Nombre </th>
-                            <th className="w-1/5 py-2"> Existencia </th>
-                            <th className="w-1/5 py-2"> Precio </th>
-                            <th className="w-1/5 py-2"> Eliminar </th>
-                            <th className="w-1/5 py-2"> Editar </th>
+                            <tr className="text-white">
 
-                        </tr>
+                                <th className="w-1/5 py-2"> Nombre </th>
+                                <th className="w-1/5 py-2"> Existencia </th>
+                                <th className="w-1/5 py-2"> Precio </th>
+                                <th className="w-1/5 py-2"> Eliminar </th>
+                                <th className="w-1/5 py-2"> Editar </th>
 
-                    </thead>
+                            </tr>
 
-                    <tbody className="bg-white">
+                        </thead>
 
-                        { 
-                        
-                            data.obtenerProductos
+                        <tbody className="bg-white">
 
-                                ? data.obtenerProductos.map(producto => (
+                            { 
+                            
+                                data.obtenerProductos
 
-                                    <Producto key={producto.id} producto={producto} />
+                                    ? data.obtenerProductos.map(producto => (
 
-                                ))
-                                : <h1 className="text-black"> Cragando... </h1> 
+                                        <Producto key={producto.id} producto={producto} />
 
-                        } 
+                                    ))
+                                    : <h1 className="text-black"> Cragando... </h1> 
 
-                    </tbody>
+                            } 
 
-                </table>
+                        </tbody>
+
+                    </table>
+
+                </div>
 
             </Layout>
 

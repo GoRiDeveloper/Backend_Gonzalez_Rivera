@@ -43,7 +43,7 @@ export default function Layout ({children}) {
 
                         <div className="bg-gray-200 min-h-screen">
 
-                            <div className="flex min-h-screen">
+                            <div className="sm:flex min-h-screen">
 
                                 <Sidebar />
 

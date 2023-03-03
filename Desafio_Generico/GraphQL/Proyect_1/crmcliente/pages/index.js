@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Layout from "../components/Layout.js";
 import Cliente from "../components/Cliente.js";
-import Router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { useQuery, gql } from "@apollo/client";
 
 const OBTENER_CLIENTES_USUARIO = gql`
@@ -60,46 +60,50 @@ export default function Index() {
         <Link 
         
           href="/nuevocliente" 
-          className="bg-blue-800 py-2 px-5 mt-3 inline-block text-white rounded text-sm hover:bg-gray-800 mb-3 uppercase font-bold"
+          className="bg-blue-800 py-2 px-5 mt-3 inline-block text-white rounded text-sm hover:bg-gray-800 mb-3 uppercase font-bold w-full lg:w-auto text-center"
           
         > 
           Nuevo Cliente 
         </Link>
 
-        <table className="table-auto shadow-md mt-10 w-full w-lg">
+        <div className="overflow-x-scroll">
 
-          <thead className="bg-gray-800">
+          <table className="table-auto shadow-md mt-10 w-full w-lg">
 
-            <tr className="text-white">
+            <thead className="bg-gray-800">
 
-              <th className="w-1/5 py-2"> Nombre </th>
-              <th className="w-1/5 py-2"> Empresa </th>
-              <th className="w-1/5 py-2"> E-Mail </th>
-              <th className="w-1/5 py-2"> Eliminar </th>
-              <th className="w-1/5 py-2"> Editar </th>
+              <tr className="text-white">
 
-            </tr>
+                <th className="w-1/5 py-2"> Nombre </th>
+                <th className="w-1/5 py-2"> Empresa </th>
+                <th className="w-1/5 py-2"> E-Mail </th>
+                <th className="w-1/5 py-2"> Eliminar </th>
+                <th className="w-1/5 py-2"> Editar </th>
 
-          </thead>
+              </tr>
 
-          <tbody className="bg-white">
+            </thead>
 
-            { 
+            <tbody className="bg-white">
 
-              data && data.obtenerClientesVendedor
+              { 
 
-                ? data.obtenerClientesVendedor.map(cliente => (
+                data && data.obtenerClientesVendedor
 
-                  <Cliente key={cliente.id} cliente={cliente} />
+                  ? data.obtenerClientesVendedor.map(cliente => (
 
-                ))
-                : <h1 className="text-black"> Cargando... </h1>
-              
-            }
+                    <Cliente key={cliente.id} cliente={cliente} />
 
-          </tbody>
+                  ))
+                  : <h1 className="text-black"> Cargando... </h1>
+                
+              }
 
-        </table>
+            </tbody>
+
+          </table>
+
+        </div>
 
       </Layout>
 

@@ -14,7 +14,7 @@ const REGISTER = new Strategy({
 
     } catch (err) {
 
-        done(null, false, err);  
+        done(err, false);  
 
     };
 
