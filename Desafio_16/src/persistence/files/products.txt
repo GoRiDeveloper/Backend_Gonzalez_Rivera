@@ -1,0 +1,10 @@
+[
+	{
+		"id": "1c4633c8-2605-4942-8506-1dd19ea3fab8",
+		"name": "Celular",
+		"description": "Celular chido ocho gb de ram",
+		"price": 11000,
+		"img": "https://www.google.com/imagen.png",
+		"stock": 52
+	}
+]

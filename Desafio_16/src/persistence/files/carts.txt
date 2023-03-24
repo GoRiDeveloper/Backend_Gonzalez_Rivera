@@ -1,0 +1,16 @@
+[
+	{
+		"id": "7b2bd1c2-c430-4454-9391-100ff7201df2",
+		"products": [
+			{
+				"id": "1c4633c8-2605-4942-8506-1dd19ea3fab8",
+				"name": "Celular",
+				"description": "Celular chido ocho gb de ram",
+				"price": 11000,
+				"img": "https://www.google.com/imagen.png",
+				"stock": 53,
+				"quantity": 2
+			}
+		]
+	}
+]
