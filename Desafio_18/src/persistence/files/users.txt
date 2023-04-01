@@ -1,0 +1,12 @@
+[
+	{
+		"id": "ef2796ae-5981-4fc0-933f-9a0eeffa27f6",
+		"name": "Juan",
+		"lastName": "Peréz",
+		"email": "juanola@gmail.com",
+		"user": "juanola",
+		"pass": "$2b$10$k8qh9KanqC3uDsYjG6r2k.dzf0wiFUsXGXr/ARUSF0AYh1Y/CBKDG",
+		"age": "20",
+		"avatar": "https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg"
+	}
+]

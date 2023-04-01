@@ -1,0 +1,18 @@
+[
+	{
+		"id": "1c4633c8-2605-4942-8506-1dd19ea3fab8",
+		"name": "Celular",
+		"description": "Celular chido ocho gb de ram",
+		"price": 11000,
+		"img": "https://www.google.com/imagen.png",
+		"stock": 52
+	},
+	{
+		"id": "55701c22-ef8c-404f-824b-4cd1807b18f1",
+		"name": "Pantalla",
+		"description": "Pantalla de quince pulgadas",
+		"price": 12000.89,
+		"img": "https://www.google.com/imagen.png",
+		"stock": 24
+	}
+]
