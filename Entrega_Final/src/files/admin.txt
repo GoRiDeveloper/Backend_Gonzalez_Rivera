@@ -1,0 +1,12 @@
+[
+    {
+
+        "admin" : [
+            "pedro12@gmail.com",
+            "lopitos2@hotmail.com",
+            "zuarte454@empresa.com",
+            "sandrita@gmail.com"
+        ]
+        
+    }
+]

@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export default class Search {
 
     constructor () {
@@ -6,7 +8,17 @@ export default class Search {
     };
 
     async city (place = "") {
-        return [];
+
+        try {
+
+            const instance = axios.create({
+                baseURL
+            });
+
+        } catch (err) {
+            return [];
+        };
+
     };
 
 };
